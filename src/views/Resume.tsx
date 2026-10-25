@@ -58,8 +58,8 @@ const translations = {
     download: 'View & Download',
     downloadPdf: 'Resume in PDF',
     waterloo: 'University of Waterloo',
-    waterlooLocation: '2B, Waterloo, Ontario',
-    waterlooDates: 'Sep 2024 - (Expected) April 2029',
+    waterlooLocation: '3A, Waterloo, Ontario',
+    waterlooDates: 'Sep 2024 - August 2028',
     bachelorOfMath: (
       <>
         <strong>Bachelor of Mathematics (Honours) Co-op</strong>, Data Science
@@ -88,8 +88,8 @@ const translations = {
     download: '查看并下载',
     downloadPdf: 'PDF 简历',
     waterloo: '滑铁卢大学',
-    waterlooLocation: '2B，安大略省滑铁卢',
-    waterlooDates: '2024 年 9 月 - 预计 2029 年 4 月',
+    waterlooLocation: '3A，安大略省滑铁卢',
+    waterlooDates: '2024 年 9 月 - 2028 年 8 月',
     bachelorOfMath: (
       <>
         <strong>数学荣誉学士（Co-op）</strong>，数据科学

@@ -243,41 +243,13 @@ const FountainPreview = () => (
       <span />
       <span />
     </div>
-    <div className="project-preview-body">
-      <div className="fountain-phone">
-        <div className="fountain-status" />
-        <div className="fountain-topbar">
-          <span className="fountain-logo">FH</span>
-          <span className="fountain-avatar" />
-        </div>
-        <div className="fountain-card">
-          <span className="fountain-pill">Wait time</span>
-          <strong>12 min</strong>
-          <span className="fountain-clinic">Waterloo clinic</span>
-        </div>
-        <div className="fountain-clinics">
-          <div className="fountain-clinic-row fountain-clinic-row-active">
-            <span />
-            <strong>Open</strong>
-          </div>
-          <div className="fountain-clinic-row">
-            <span />
-            <strong>18 min</strong>
-          </div>
-        </div>
-        <div className="fountain-action">Join queue</div>
-      </div>
-      <div className="fountain-side-card">
-        <span>Live queue</span>
-        <strong>4</strong>
-        <div className="fountain-mini-chart">
-          <i />
-          <i />
-          <i />
-          <i />
-        </div>
-      </div>
-    </div>
+   <div className="website-preview-viewport" />
+   <iframe
+     src="https://fountain.example.com"
+     title="Fountain Project Preview"
+     loading="lazy"
+     className="website-preview-iframe"
+   />
   </div>
 )
 
