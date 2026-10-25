@@ -88,7 +88,7 @@ const IntroductionCard = () => {
             <>
               我是 <span className="highlight">滑铁卢大学</span>{' '}
               <img src={waterlooLogo} alt="滑铁卢大学" className="inline-logo" />
-              的 <span className="highlight">2B 数据科学学生</span>，热爱
+              的 <span className="highlight">3A 数据科学学生</span>，热爱
               <span className="highlight">软件开发</span>与
               <span className="highlight">创新</span>。我擅长使用
               <span className="highlight">现代技术</span>构建
@@ -101,7 +101,7 @@ const IntroductionCard = () => {
             </>
           ) : (
             <>
-              I'm a <span className="highlight">2B Data Science student</span> at the{' '}
+              I'm a <span className="highlight">3A Data Science student</span> at the{' '}
               <span className="highlight">University of Waterloo</span>{' '}
               <img src={waterlooLogo} alt="University of Waterloo" className="inline-logo" />
               {' '}with a passion
