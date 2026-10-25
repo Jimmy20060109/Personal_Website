@@ -243,7 +243,7 @@ const FountainPreview = () => (
       <span />
       <span />
     </div>
-    <div className="website-preview-viewport">
+    <div className="project-preview-body">
       <iframe
         src="https://fountainhealth.ca/"
         title="Fountain Project Preview"

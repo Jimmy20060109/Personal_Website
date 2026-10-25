@@ -87,11 +87,12 @@
 }
 
 .introduction-greeting {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   font-weight: 500;
   margin: 0;
   color: var(--color-text);
   line-height: 1.6;
+  animation: introduction-greeting-reveal 2s linear both;
 }
 
 .introduction-social-icons {
@@ -122,14 +123,19 @@
   width: 20px;
   height: 20px;
 }
+.introduction-greeting {
+  container-type: inline-size;
+  font-family: "Libre Baskerville", serif;
+}
 
 .introduction-greeting strong {
+  font-family: 'Rubik Storm', 'Noto Sans SC', sans-serif;
   font-weight: 600;
 }
 
 .introduction-description {
-  font-size: var(--font-size-base);
-  line-height: 1.6;
+  font-size: clamp(1rem, 3.5cqw, 1.25rem);
+  line-height: 1.5;
   color: var(--color-text-light);
   margin: 0;
 }
@@ -172,10 +178,6 @@
 
   .introduction-greeting {
     font-size: clamp(var(--font-size-xl), 1.45vw, 2.15rem);
-  }
-
-  .introduction-description {
-    font-size: clamp(var(--font-size-base), 0.95vw, 1.45rem);
   }
 
   .introduction-social-icons {
@@ -224,8 +226,23 @@
   }
 
   .introduction-description {
-    font-size: var(--font-size-sm);
     overflow-wrap: anywhere;
     word-break: break-word;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  .introduction-greeting {
+    animation: none;
+    clip-path: none;
+  }
+}
+
+@keyframes introduction-greeting-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
