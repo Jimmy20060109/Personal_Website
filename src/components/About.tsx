@@ -32,7 +32,7 @@ const About = () => {
                 滑铁卢大学
               </a>
               <img src={WaterlooLogo} alt="滑铁卢大学 Logo" className="waterloo-logo-inline" />
-              的 <strong>2B 数据科学学生</strong>。我对构建
+              的 <strong>3A 数据科学学生</strong>。我对构建
               <span className="about-highlight">现代、高效、工程质量扎实的软件系统</span>
               有强烈兴趣。凭借数据科学背景和行业实践经验，我会同时从
               <span className="about-highlight">理论与工程落地</span>两个角度思考问题。
@@ -77,7 +77,7 @@ const About = () => {
         ) : (
           <>
             <p className="about-text">
-              I'm a <strong>software engineer</strong> and a <strong>2B Data Science student</strong> at the{' '}
+              I'm a <strong>software engineer</strong> and a <strong>3A Data Science student</strong> at the{' '}
               <a
                 href="https://uwaterloo.ca/"
                 target="_blank"

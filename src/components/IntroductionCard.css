@@ -154,6 +154,7 @@
   height: 1.8em;
   width: auto;
   margin: 0 6px;
+  border-radius: 6px;
 }
 
 @media (min-width: 1800px) {
