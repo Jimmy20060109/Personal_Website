@@ -96,7 +96,7 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <nav className="nav">
         <NavLink to="/" className="nav-brand">
-          Jimmy Zheng
+          Jimmy Zheng.
         </NavLink>
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           {allNavItems.map((item) => (
