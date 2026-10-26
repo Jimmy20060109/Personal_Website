@@ -186,15 +186,12 @@ const SimonPreview = () => (
       <span />
     </div>
     <div className="project-preview-body">
-      <div className="simon-board">
-        <div className="simon-pad simon-pad-green" />
-        <div className="simon-pad simon-pad-red" />
-        <div className="simon-pad simon-pad-yellow" />
-        <div className="simon-pad simon-pad-blue" />
-        <div className="simon-center">
-          <span className="simon-center-label">SIMON</span>
-        </div>
-      </div>
+      <iframe
+        src="https://jimmy20060109.github.io/Simons-Game/"
+        title="Simon's Game Project Preview"
+        loading="lazy"
+        className="website-preview-iframe"
+      />
     </div>
   </div>
 )
@@ -207,31 +204,12 @@ const KeeperPreview = () => (
       <span />
     </div>
     <div className="project-preview-body">
-      <div className="keeper-header">
-        <div className="keeper-logo" />
-        <div className="keeper-search" />
-      </div>
-      <div className="keeper-grid">
-        <div className="keeper-note keeper-note-tall">
-          <div className="line line-w-70" />
-          <div className="line line-w-90" />
-          <div className="line line-w-50" />
-        </div>
-        <div className="keeper-note">
-          <div className="line line-w-60" />
-          <div className="line line-w-80" />
-        </div>
-        <div className="keeper-note keeper-note-accent">
-          <div className="line line-w-50" />
-          <div className="line line-w-70" />
-          <div className="line line-w-40" />
-        </div>
-        <div className="keeper-note">
-          <div className="line line-w-80" />
-          <div className="line line-w-60" />
-          <div className="line line-w-90" />
-        </div>
-      </div>
+      <iframe
+        src="https://jimmy20060109.github.io/Website-create/"
+        title="Keeper Note App Project Preview"
+        loading="lazy"
+        className="website-preview-iframe"
+      />
     </div>
   </div>
 )
@@ -281,19 +259,35 @@ const PortfolioPreview = () => (
     <div className="project-preview-body">
       <div className="portfolio-shell">
         <div className="portfolio-nav">
-          <span />
-          <span />
-          <span />
+          <strong>Jimmy Zheng</strong>
+          <span>Home</span>
+          <span>About</span>
+          <span>Projects</span>
         </div>
         <div className="portfolio-grid">
-          <div className="portfolio-tile portfolio-tile-wide">
-            <span />
-            <strong>Jimmy Zheng</strong>
+          <div className="portfolio-tile portfolio-tile-intro">
+            <small>WELCOME TO MY WEB</small>
+            <strong>Hey there! I am Jimmy Zheng.</strong>
+            <span>Data science student building efficient, scalable solutions.</span>
           </div>
-          <div className="portfolio-tile portfolio-tile-photo" />
-          <div className="portfolio-tile portfolio-tile-tall" />
-          <div className="portfolio-tile" />
-          <div className="portfolio-tile portfolio-tile-map" />
+          <div className="portfolio-tile portfolio-tile-resume">
+            <small>MY RESUME</small>
+            <strong>Experience & skills</strong>
+            <span>View & download</span>
+          </div>
+          <div className="portfolio-tile portfolio-tile-photo">
+            <small>CREATIVE WORK</small>
+            <strong>Photography</strong>
+          </div>
+          <div className="portfolio-tile portfolio-tile-projects">
+            <small>FEATURED WORK</small>
+            <strong>Projects</strong>
+            <span>Products shipped end-to-end</span>
+          </div>
+          <div className="portfolio-tile portfolio-tile-location">
+            <small>CURRENT BASE</small>
+            <strong>Waterloo, Canada</strong>
+          </div>
         </div>
       </div>
       <div className="portfolio-chat">
