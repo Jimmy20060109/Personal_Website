@@ -29,6 +29,19 @@ if (renderer.ready) {
 
 const binaryStream = ['10110100', '01001011', '11010010', '00111101', '10011010']
 
+const metrics = [
+  { tone: 'red', name: 'Fountain', value: '10+ screens', status: 'Live' },
+  { tone: 'blue', name: 'VolunTrack', value: '< 2s search', status: 'Shipped' },
+  { tone: 'green', name: 'Portfolio', value: '300+ images', status: 'Live' },
+  { tone: 'pink', name: 'RAG API', value: '3 endpoints', status: 'Healthy' },
+  { tone: 'purple', name: 'Simon', value: '4 pads', status: 'Live' },
+  { tone: 'cyan', name: 'Keeper', value: 'React Hooks', status: 'Live' },
+  { tone: 'violet', name: 'Flutter UI', value: 'iOS / Android', status: 'Synced' },
+  { tone: 'coral', name: 'Tests', value: '15+ bugs', status: 'Caught' },
+  { tone: 'lilac', name: 'Drag & Drop', value: 'Interact.js', status: 'Active' },
+  { tone: 'indigo', name: 'Deploy', value: 'Vercel', status: 'Ready' },
+]
+
 // Tiny seedable PRNG so node positions are stable across renders & SSR.
 const createRandom = (seed: number) => {
   let s = seed
@@ -107,6 +120,51 @@ const ProjectCardMotionBackground = () => {
 
   return (
     <div className="project-card-bg" aria-hidden="true">
+      <div className="project-card-bg__dashboard">
+        <div className="project-card-bg__topbar">
+          <span className="project-card-bg__logo"><i /><i /><i /></span>
+          <span className="project-card-bg__nav-text project-card-bg__nav-text--active">Dashboard</span>
+          <span className="project-card-bg__nav-text">Projects</span>
+          <span className="project-card-bg__nav-text">Builds</span>
+          <span className="project-card-bg__nav-text">Analytics</span>
+          <span className="project-card-bg__search">Search projects…</span>
+          <span className="project-card-bg__avatar" />
+          <span className="project-card-bg__chevron" />
+        </div>
+
+        <div className="project-card-bg__toolbar">
+          <span /><span /><span /><span /><span />
+          <span className="project-card-bg__toolbar-spacer" />
+          <span /><span /><span />
+        </div>
+
+        <div className="project-card-bg__alert">
+          <strong>!</strong>
+          <span className="project-card-bg__alert-text">
+            <b>New release deployed</b>
+            <small>Personal Website v2 is live on Vercel</small>
+          </span>
+          <span className="project-card-bg__alert-divider" />
+          <span className="project-card-bg__alert-text project-card-bg__alert-text--right">
+            <b>5 projects</b>
+            <small>All systems operational</small>
+          </span>
+        </div>
+
+        <div className="project-card-bg__section-title">Project overview</div>
+        <div className="project-card-bg__metric-grid">
+          {metrics.map(({ tone, name, value, status }) => (
+            <span className={`project-card-bg__metric project-card-bg__metric--${tone}`} key={tone}>
+              <i className="project-card-bg__metric-color" />
+              <b className="project-card-bg__metric-name">{name}</b>
+              <small className="project-card-bg__metric-value">{value}</small>
+              <small className="project-card-bg__metric-status">● {status}</small>
+              <i className="project-card-bg__metric-chart" />
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div className="project-card-bg__layer project-card-bg__layer--code">
         <pre className="project-card-bg__code">{codeSnippet}</pre>
       </div>
