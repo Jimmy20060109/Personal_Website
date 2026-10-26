@@ -33,7 +33,7 @@ import RacketLogo from '../images/ProgrammingLanguage/Racket_Logo.png'
 import ReactLogo from '../images/framework/React_Logo.png'
 import ReactNativeLogo from '../images/framework/React_Native_Logo.png'
 import RestAPILogo from '../images/framework/RestAPI_Logo.png'
-import ResumePdf from "../images/Jimmy Zheng's External CS Resume V4 .pdf"
+import ResumePdf from "../images/Jimmy's_Resume.pdf"
 import RHHSLogo from '../images/RHHSLogo.png'
 import SQLLogo from '../images/ProgrammingLanguage/SQL_Logo.png'
 import SkillsLogo from '../images/Skill_Logo.png'

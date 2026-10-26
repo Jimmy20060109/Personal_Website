@@ -243,7 +243,7 @@ const FountainPreview = () => (
       <span />
       <span />
     </div>
-    <div className="project-preview-body">
+    <div className="project-preview-">
       <iframe
         src="https://fountainhealth.ca/"
         title="Fountain Project Preview"
@@ -253,7 +253,6 @@ const FountainPreview = () => (
     </div>
   </div>
 )
-
 const VolunTrackPreview = () => (
   <div className="project-preview-frame project-preview-voluntrack">
     <div className="project-preview-chrome">
@@ -262,39 +261,12 @@ const VolunTrackPreview = () => (
       <span />
     </div>
     <div className="project-preview-body">
-      <div className="voluntrack-dashboard">
-        <div className="voluntrack-nav">
-          <span className="voluntrack-brand" />
-          <span />
-          <span />
-        </div>
-        <div className="voluntrack-search">
-          <span>Search opportunities</span>
-        </div>
-        <div className="voluntrack-list">
-          <div className="voluntrack-row voluntrack-row-active">
-            <span className="voluntrack-badge">STEM</span>
-            <strong>Food bank shift</strong>
-            <em>1.2 km</em>
-          </div>
-          <div className="voluntrack-row">
-            <span className="voluntrack-badge">Youth</span>
-            <strong>Library helper</strong>
-            <em>2.8 km</em>
-          </div>
-          <div className="voluntrack-row">
-            <span className="voluntrack-badge">Care</span>
-            <strong>Clinic desk</strong>
-            <em>4.1 km</em>
-          </div>
-        </div>
-      </div>
-      <div className="voluntrack-phone">
-        <span className="voluntrack-phone-bar" />
-        <span className="voluntrack-phone-card" />
-        <span className="voluntrack-phone-card voluntrack-phone-card-active" />
-        <span className="voluntrack-phone-card" />
-      </div>
+      <iframe
+        src="https://voluntracks.com/"
+        title="VolunTrack Project Preview"
+        loading="lazy"
+        className="website-preview-iframe"
+      />
     </div>
   </div>
 )
