@@ -103,7 +103,7 @@
   50% { opacity: 1; }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .home-container {
     --home-grid-columns: 12;
     --home-grid-row-height: minmax(min-content, auto);

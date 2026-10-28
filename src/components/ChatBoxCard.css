@@ -211,7 +211,7 @@
   cursor: not-allowed;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 950px) {
   .home-slot > .chatbox-card {
     margin: 0;
     padding-left: var(--spacing-sm);

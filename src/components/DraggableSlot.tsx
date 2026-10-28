@@ -10,7 +10,7 @@ interface DraggableSlotProps {
 
 const INTERACTIVE_SELECTOR = 'button, input, textarea'
 
-const DESKTOP_QUERY = '(min-width: 1024px) and (hover: hover) and (pointer: fine)'
+const DESKTOP_QUERY = '(min-width: 950px) and (hover: hover) and (pointer: fine)'
 
 const DraggableSlot = ({ slotIndex, cardId, onSwap, children }: DraggableSlotProps) => {
   const ref = useRef<HTMLDivElement>(null)

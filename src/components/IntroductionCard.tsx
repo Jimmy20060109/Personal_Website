@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import avatarImage from '../images/avatar.jpeg'
 import cursorLogo from '../images/cursorLogo.png?url'
@@ -19,9 +20,49 @@ const translations = {
   },
 }
 
+const MIN_SCALE = 0.7
+const MAX_SCALE = 2.5
+
 const IntroductionCard = () => {
   const { language } = useLanguage()
   const t = useTranslations(translations)
+  const cardRef = useRef<HTMLAnchorElement>(null)
+
+  useLayoutEffect(() => {
+    const card = cardRef.current
+    if (!card) return
+    const desktop = window.matchMedia('(min-width: 950px)')
+
+    const overflows = (scale: number) => {
+      card.style.setProperty('--intro-scale', String(scale))
+      return card.scrollHeight > card.clientHeight
+    }
+
+    const fit = () => {
+      if (!desktop.matches) {
+        card.style.removeProperty('--intro-scale')
+        return
+      }
+      let lo = MIN_SCALE
+      let hi = MAX_SCALE
+      for (let i = 0; i < 10; i++) {
+        const mid = (lo + hi) / 2
+        if (overflows(mid)) hi = mid
+        else lo = mid
+      }
+      card.style.setProperty('--intro-scale', String(Math.floor(lo * 1000) / 1000))
+    }
+
+    fit()
+    const observer = new ResizeObserver(fit)
+    observer.observe(card)
+    desktop.addEventListener('change', fit)
+    document.fonts?.ready.then(fit)
+    return () => {
+      observer.disconnect()
+      desktop.removeEventListener('change', fit)
+    }
+  }, [language])
 
   const handleSocialClick = (e: React.MouseEvent, url: string) => {
     e.preventDefault()
@@ -30,7 +71,7 @@ const IntroductionCard = () => {
   }
 
   return (
-    <Link to="/about" className="introduction-card">
+    <Link to="/about" className="introduction-card" ref={cardRef}>
       <div className="introduction-content">
         <div className="introduction-header">
           <div className="introduction-top-row">
