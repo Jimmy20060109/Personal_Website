@@ -1,6 +1,6 @@
 import './About.css'
 import WaterlooLogo from '../images/waterlooLoGo.svg'
-import KinaxisLogo from '../images/kinaxis_Logo.png'
+import KinaxisLogo from '../images/Kinaxis_Logo.png'
 import { useTranslations } from '../i18n/LanguageContext'
 
 const translations = {
