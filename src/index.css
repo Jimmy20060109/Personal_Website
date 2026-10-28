@@ -72,12 +72,16 @@
   --chatbox-assistant-bubble: #1C2030;
 }
 
+:root:lang(zh) {
+  --font-family-zh: 'ZCOOL XiaoWei', 'Noto Sans SC', serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--font-family-zh, 'Bricolage Grotesque', sans-serif);
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,7 +98,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--font-family-zh, 'Bricolage Grotesque', sans-serif);
 }
 
 code {

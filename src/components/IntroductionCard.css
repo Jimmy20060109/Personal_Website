@@ -125,11 +125,11 @@
 }
 .introduction-greeting {
   container-type: inline-size;
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-zh, "Libre Baskerville", serif);
 }
 
 .introduction-greeting strong {
-  font-family: 'Rubik Storm', 'Noto Sans SC', sans-serif;
+  font-family: var(--font-family-zh, 'Rubik Storm', 'Noto Sans SC', sans-serif);
   font-weight: 600;
 }
 

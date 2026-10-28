@@ -25,12 +25,12 @@ const SkillsCard = () => {
 
   return (
     <Link to="/skills" className="skills-card" aria-label={t.aria}>
-      <SkillsCardMotionBackground />
       <div className="skills-card-content">
         <div className="skills-card-top">
           <p className="skills-card-eyebrow">{t.eyebrow}</p>
           <h2 className="skills-card-title">{t.title}</h2>
         </div>
+        <SkillsCardMotionBackground />
         <div className="skills-card-footer">
           <p className="skills-card-subtitle">
             {t.subtitle}
