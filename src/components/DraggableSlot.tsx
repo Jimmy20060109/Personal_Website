@@ -15,6 +15,7 @@ const DESKTOP_QUERY = '(min-width: 1024px) and (hover: hover) and (pointer: fine
 const DraggableSlot = ({ slotIndex, cardId, onSwap, children }: DraggableSlotProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const onSwapRef = useRef(onSwap)
+  const entranceDelay = useRef(slotIndex * 150)
 
   useEffect(() => {
     onSwapRef.current = onSwap
@@ -102,6 +103,7 @@ const DraggableSlot = ({ slotIndex, cardId, onSwap, children }: DraggableSlotPro
       className="home-slot"
       data-slot-index={slotIndex}
       data-card-id={cardId}
+      style={{ animationDelay: `${entranceDelay.current}ms` }}
     >
       {children}
     </div>

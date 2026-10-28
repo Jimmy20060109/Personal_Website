@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import avatarImage from '../images/avatar.jpg?url'
+import avatarImage from '../images/avatar.jpeg'
 import cursorLogo from '../images/cursorLogo.png?url'
 import claudeLogo from '../images/claude-ai-icon.webp?url'
 import waterlooLogo from '../images/waterlooLoGo.svg?url'

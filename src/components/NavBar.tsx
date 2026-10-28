@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { allNavItems, type NavItemId } from '../routes'
 import {
@@ -59,12 +59,32 @@ function getInitialTheme(): ThemeMode {
 }
 
 const NavBar = () => {
+  const navbarRef = useRef<HTMLElement>(null)
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [theme, setTheme] = useState<ThemeMode>(() => getInitialTheme())
   const { language, setLanguage } = useLanguage()
   const t = useTranslations(translations)
   const location = useLocation()
+
+  useLayoutEffect(() => {
+    const navbar = navbarRef.current
+    if (!navbar) return
+
+    const root = document.documentElement
+    const updateHeight = () => {
+      root.style.setProperty('--navbar-height', `${navbar.getBoundingClientRect().height}px`)
+    }
+
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    observer.observe(navbar, { box: 'border-box' })
+
+    return () => {
+      observer.disconnect()
+      root.style.removeProperty('--navbar-height')
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,7 +113,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <header ref={navbarRef} className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <nav className="nav">
         <NavLink to="/" className="nav-brand">
           Jimmy Zheng.
