@@ -399,6 +399,21 @@
   transform: scale(1.1);
 }
 
+:root:not([data-theme='dark']) .section-title,
+:root:not([data-theme='dark']) .skills-category-title {
+  color: var(--color-highlight);
+}
+
+:root:not([data-theme='dark']) .education-entry,
+:root:not([data-theme='dark']) .skills-category {
+  border-color: var(--color-border);
+  background-color: var(--color-surface-alt);
+}
+
+:root:not([data-theme='dark']) .skills-logos {
+  --skills-logos-bg: var(--color-surface-alt);
+}
+
 @media (max-width: 768px) {
   .resume-view {
     padding-top: calc(var(--spacing-md) + 64px);
@@ -512,6 +527,11 @@
   transition: none !important;
 }
 
+:root:not([data-theme='dark']) .resume-view .experience-item {
+  background-color: var(--color-surface-alt) !important;
+  border-color: var(--color-border) !important;
+}
+
 .experience-item:hover {
   transform: none;
   box-shadow: none;
@@ -571,6 +591,10 @@
   border-bottom: 1px solid #d2d2d7;
 }
 
+:root:not([data-theme='dark']) .resume-view .experience-technologies {
+  border-bottom-color: var(--color-border);
+}
+
 .tech-tag {
   font-size: var(--font-size-xs);
   padding: 4px 12px;
@@ -579,6 +603,12 @@
   border-radius: 12px;
   font-weight: 500;
   border: 1px solid rgba(65, 105, 225, 0.2);
+}
+
+:root:not([data-theme='dark']) .resume-view .tech-tag {
+  background-color: rgba(194, 77, 53, 0.08);
+  border-color: rgba(194, 77, 53, 0.2);
+  color: var(--color-highlight);
 }
 
 .experience-achievements {

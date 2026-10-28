@@ -18,6 +18,12 @@
   gap: clamp(var(--spacing-lg), 4vw, 3.5rem);
 }
 
+:root:not([data-theme='dark']) .projects-section {
+  --projects-accent: var(--color-highlight);
+  --projects-accent-hover: #A63F2B;
+  --projects-tag-color: var(--color-text-light);
+}
+
 :root[data-theme='dark'] .projects-section {
   --projects-card-border: rgba(148, 163, 184, 0.16);
   --projects-card-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.6),

@@ -97,6 +97,11 @@
   color: #2f4a9a;
 }
 
+:root:not([data-theme='dark']) .chatbox-source-item {
+  background: rgba(194, 77, 53, 0.08);
+  color: var(--color-highlight);
+}
+
 .chatbox-source-title {
   font-weight: 600;
 }
@@ -121,6 +126,10 @@
   border-radius: 999px;
   background: #3a5ccc;
   animation: chatbox-dot-bounce 1.2s infinite ease-in-out;
+}
+
+:root:not([data-theme='dark']) .chatbox-dot {
+  background: var(--color-highlight);
 }
 
 .chatbox-dot:nth-child(2) {
@@ -191,6 +200,11 @@
   outline: none;
   border-color: rgba(58, 92, 204, 0.6);
   box-shadow: 0 0 0 3px rgba(58, 92, 204, 0.16);
+}
+
+:root:not([data-theme='dark']) .chatbox-input:focus {
+  border-color: rgba(194, 77, 53, 0.6);
+  box-shadow: 0 0 0 3px rgba(194, 77, 53, 0.16);
 }
 
 .chatbox-send-button {

@@ -1,7 +1,7 @@
 .project-card-home {
   --project-card-button-bg: rgba(255, 255, 255, 0.82);
   --project-card-button-bg-hover: rgba(255, 255, 255, 0.96);
-  --project-card-button-border: rgba(58, 92, 204, 0.2);
+  --project-card-button-border: rgba(194, 77, 53, 0.2);
   --project-card-button-color: var(--color-highlight);
   display: flex;
   width: 100%;
