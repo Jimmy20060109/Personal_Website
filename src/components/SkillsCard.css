@@ -21,8 +21,8 @@
 }
 
 :root[data-theme='dark'] .skills-card {
-  --skills-ink: #f5ecde;
-  --skills-muted: #cbc9bf;
+  --skills-ink: var(--color-text);
+  --skills-muted: var(--color-text-light);
   --skills-wheel: #e8e4d7;
   --skills-ground: #4b524f;
   --skills-motion: #b7b29b;

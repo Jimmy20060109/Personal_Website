@@ -47,29 +47,33 @@
 }
 
 :root[data-theme='dark'] {
-  --color-bg: #0F1115;
-  --color-text: #E6E8EC;
-  --color-text-light: #B0B6C3;
-  --color-text-muted: #7C8396;
-  --color-card: #151821;
-  --color-surface: #151821;
-  --color-surface-alt: #1C2030;
-  --color-strong-bg: #1C2030;
+  --bg-primary: #101216;
+  --bg-secondary: #1C2026;
+  --text-primary: #B69CFF;
+  --text-secondary: #5EEAD4;
+  --color-bg: var(--bg-primary);
+  --color-text: var(--text-primary);
+  --color-text-light: var(--text-secondary);
+  --color-text-muted: var(--text-secondary);
+  --color-card: var(--bg-secondary);
+  --color-surface: var(--bg-secondary);
+  --color-surface-alt: var(--bg-secondary);
+  --color-strong-bg: var(--bg-secondary);
   --color-border: #262B3A;
   --color-accent-blue: #6C8CF5;
   --color-accent-purple: #7A96FF;
   --color-highlight: #7A96FF;
   --color-underline: #94A3B8;
   --color-underline-subtle: #A8B3C7;
-  --color-gray: #151821;
+  --color-gray: var(--bg-secondary);
   --color-gray-dark: #262B3A;
   --color-primary: #7A96FF;
-  --navbar-bg: rgba(15, 17, 21, 0.84);
-  --navbar-bg-scrolled: rgba(15, 17, 21, 0.94);
-  --navbar-menu-bg: rgba(21, 24, 33, 0.98);
-  --chatbox-bg: linear-gradient(160deg, #151821 0%, #1c2030 100%);
+  --navbar-bg: color-mix(in srgb, var(--bg-primary) 84%, transparent);
+  --navbar-bg-scrolled: color-mix(in srgb, var(--bg-primary) 94%, transparent);
+  --navbar-menu-bg: color-mix(in srgb, var(--bg-secondary) 98%, transparent);
+  --chatbox-bg: var(--bg-secondary);
   --chatbox-user-bubble: #6C8CF5;
-  --chatbox-assistant-bubble: #1C2030;
+  --chatbox-assistant-bubble: var(--bg-secondary);
 }
 
 :root:lang(zh) {
