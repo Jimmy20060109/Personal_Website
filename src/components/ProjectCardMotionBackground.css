@@ -19,12 +19,8 @@
   --pcb-grid-opacity: 0.55;
   --pcb-link-base: 0.18;
   --pcb-link-peak: 0.55;
-  --pcb-vignette:
-    radial-gradient(120% 80% at 50% 110%, rgba(15, 157, 107, 0.08), transparent 60%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.0) 60%, rgba(15, 17, 21, 0.04) 100%);
-  --pcb-radial-tint:
-    radial-gradient(120% 80% at 75% 30%, rgba(16, 185, 129, 0.07), transparent 60%),
-    radial-gradient(80% 60% at 18% 85%, rgba(16, 185, 129, 0.05), transparent 60%);
+  --pcb-vignette: none;
+  --pcb-radial-tint: var(--color-card);
 
   position: absolute;
   inset: 0;
@@ -44,7 +40,7 @@
   flex-direction: column;
   padding: 10px 12px 12px;
   color: #64748b;
-  background: #f8fbff;
+  background: var(--color-card);
 }
 
 .project-card-bg__dashboard > * {
@@ -356,7 +352,7 @@
 
 :root[data-theme='dark'] .project-card-bg__dashboard {
   color: #91a5bd;
-  background: #08131e;
+  background: var(--color-card);
 }
 
 :root[data-theme='dark'] .project-card-bg__topbar {
@@ -428,13 +424,6 @@
   --pcb-grid-opacity: 0.85;
   --pcb-link-base: 0.28;
   --pcb-link-peak: 0.85;
-  --pcb-vignette:
-    radial-gradient(120% 80% at 50% 120%, rgba(16, 185, 129, 0.18), transparent 65%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.0) 55%, rgba(0, 0, 0, 0.35) 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.18) 0%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.18) 100%);
-  --pcb-radial-tint:
-    radial-gradient(120% 80% at 75% 30%, rgba(16, 185, 129, 0.16), transparent 60%),
-    radial-gradient(80% 60% at 18% 85%, rgba(16, 185, 129, 0.10), transparent 60%);
 }
 
 /* ── Layers ──────────────────────────────────────────────── */
