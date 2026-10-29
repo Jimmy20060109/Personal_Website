@@ -242,7 +242,6 @@ const Skills = () => {
                   } as React.CSSProperties
                 }
               >
-                <div className="skill-domain-glow" aria-hidden="true" />
                 <div className="skill-domain-inner">
                   <header className="skill-domain-header">
                     <span className="skill-domain-icon" aria-hidden="true">

@@ -59,7 +59,7 @@ const translations = {
     downloadPdf: 'Resume in PDF',
     waterloo: 'University of Waterloo',
     waterlooLocation: '3A, Waterloo, Ontario',
-    waterlooDates: 'Sep 2024 - August 2028',
+    waterlooDates: 'Sep 2024 - Aug 2028',
     bachelorOfMath: (
       <>
         <strong>Bachelor of Mathematics (Honours) Co-op</strong>, Data Science
@@ -136,11 +136,46 @@ interface SkillCategory {
 
 const experiences: ExperienceItem[] = [
   {
+    title: 'Software Engineer, Co-op',
+    company: 'Kinaxis Inc',
+    companyLinks: [{ name: 'Kinaxis Inc', href: 'https://www.kinaxis.com/' }],
+    location: 'Ottawa, Ontario',
+    period: 'Sep 2026 - Present',
+    technologies: [
+      'C++',
+      'Visual Studio',
+      'Natvis',
+      'GoogleTest (gtest)',
+      'Jenkins',
+      'CI/CD',
+      'Bitbucket',
+      'Jira',
+    ],
+    achievements: [
+      <>
+        Developed custom <strong className="experience-tech">Natvis</strong> debugger visualizations for complex{' '}
+        <strong className="experience-tech">C++</strong> domain objects, exposing key identifiers and
+        improving debugging efficiency while preserving release-build behavior.
+      </>,
+      <>
+        Built reusable <strong className="experience-tech">C++</strong> b-map container utilities and
+        implemented automated <strong className="experience-tech">GoogleTest (gtest)</strong> and{' '}
+        <strong className="experience-tech">KUnit</strong> tests to validate functionality and improve
+        regression coverage across Core-Algorithms components.
+      </>,
+      <>
+        Enhanced <strong className="experience-tech">Jenkins</strong>{' '}
+        <strong className="experience-tech">CI/CD</strong> reporting by integrating Performance Test and
+        SQM Test, improving build-health visibility and simplifying failure diagnosis.
+      </>,
+    ],
+  },
+  {
     title: 'Full-Stack Developer, Co-op',
     company: 'Hanov Solutions Inc',
     companyLinks: [{ name: 'Hanov Solutions Inc', href: 'https://www.hanovsolutions.com/' }],
     location: 'Waterloo, Ontario',
-    period: 'Jan 2026 - April 2026',
+    period: 'Jan 2026 - Apr 2026',
     technologies: [
       'Python',
       'Go',
@@ -165,13 +200,13 @@ const experiences: ExperienceItem[] = [
         </a>
         <img src={EhTradeLogo} alt="eh-trade logo img" className="inline-tech-logo"/>
         , a momentum-based stock analytics SaaS platform, transforming{' '}
-        <strong>Python ML</strong> trading models into a production-ready{' '}
+        <strong className="experience-tech">Python ML</strong> trading models into a production-ready{' '}
         <strong>full-stack</strong> system serving real-time stock screening.
       </>,
 
 
 
-      <>Optimized <strong>Vue 3</strong><img src={VueInline} className="inline-tech-logo" alt="VueLogo"/> 
+      <>Optimized <strong className="experience-tech">Vue 3</strong><img src={VueInline} className="inline-tech-logo" alt="VueLogo"/> 
       <a href="https://eh-trade.ca/stock/AAPL"
          target="_blank"
          rel="noopener noreferrer"
@@ -190,7 +225,7 @@ const experiences: ExperienceItem[] = [
       <strong>API</strong> and <strong>RPC</strong> calls,
       and implementing <strong>lazy loading</strong>, cutting load times by <strong>30%</strong> across desktop and mobile.</>,
 
-      <>Built a scalable <strong>programmatic SEO (pSEO)</strong> system using <strong>Go</strong>
+      <>Built a scalable <strong>programmatic SEO (pSEO)</strong> system using <strong className="experience-tech">Go</strong>
       <img src={GoLogo} className="inline-tech-logo" alt="Go logo"/>, 
       implementing <strong>server-side rendering (SSR)</strong> for dynamic stock pages, automated <strong>meta/OG tag</strong>
       {' '}generation, <strong>cache-backed</strong> data prewarming, and <strong>sitemap</strong> integration, enabling
@@ -204,10 +239,10 @@ const experiences: ExperienceItem[] = [
       </a> {' '} and hundreds of comparison URLs.</>,
 
 
-      <>Developed secure <strong>authentication</strong> and <strong>subscription</strong> infrastructure using <strong>{' '}TypeScript</strong>
+      <>Developed secure <strong>authentication</strong> and <strong>subscription</strong> infrastructure using <strong className="experience-tech">{' '}TypeScript</strong>
       <img src={TSLogo} alt="TypeScript Logo" className="inline-tech-logo"/>,
-      <strong>{' '}Go</strong><img src={GoLogo} alt="Go Logo" className="inline-tech-logo"/> and
-      <strong>{' '}Stripe</strong> <img src={StripeLogo} alt="Stripe Logo" className="inline-tech-logo"/>, 
+      <strong className="experience-tech">{' '}Go</strong><img src={GoLogo} alt="Go Logo" className="inline-tech-logo"/> and
+      <strong className="experience-tech">{' '}Stripe</strong> <img src={StripeLogo} alt="Stripe Logo" className="inline-tech-logo"/>, 
       enabling recurring billing, gated premium features, 
       and full user lifecycle management from onboarding to subscription control.
       </>,
@@ -220,13 +255,13 @@ const experiences: ExperienceItem[] = [
         <img src={CursorLogo} alt="Cursor Logo" className="inline-tech-logo"/> to
         speed implementation of <strong>full-stack</strong> features including<strong> charting </strong>improvements,
         <strong> watchlist</strong> performance, <strong> subscription</strong> flows, and analytics tooling across
-        <strong> Vue.js</strong>
+        <strong className="experience-tech"> Vue.js</strong>
         <img src={VueInline} alt="Vue Logo" className="inline-tech-logo"/>, 
-        <strong>TypeScript</strong>, 
+        <strong className="experience-tech">TypeScript</strong>, 
         <img src={TSLogo} alt="TSlogo Logo" className="inline-tech-logo"/>
-        <strong> Go</strong>
+        <strong className="experience-tech"> Go</strong>
         <img src={GoLogo} alt="Go Logo" className="inline-tech-logo"/>, and 
-        <strong> Python</strong>
+        <strong className="experience-tech"> Python</strong>
         <img src={PythonLogo} alt="python logo" className="inline-tech-logo"/>, increasing feature throughput by{' '}
         <strong>40%</strong> without compromising review quality or system
         reliability.
@@ -241,7 +276,7 @@ const experiences: ExperienceItem[] = [
       { name: 'NI', href: 'https://www.ni.com/en.html?srsltid=AfmBOormNRFx7ARN0LyBbBtcxeLqHRkAZOzqghXwkx6FYN6NFfkN4hiM' },
     ],
     location: 'Shanghai, China',
-    period: 'May 2025 - August 2025',
+    period: 'May 2025 - Aug 2025',
     technologies: [
       'C++',
       'Python',
@@ -254,22 +289,22 @@ const experiences: ExperienceItem[] = [
       'React',
     ],
     achievements: [
-      <>Assisted in developing a LabVIEW-to-native-code compiler using <strong>C++</strong>
-      <img src={CppLogo} alt="C++ Logo" className="inline-tech-logo"/> and <strong>Python</strong>
+      <>Assisted in developing a LabVIEW-to-native-code compiler using <strong className="experience-tech">C++</strong>
+      <img src={CppLogo} alt="C++ Logo" className="inline-tech-logo"/> and <strong className="experience-tech">Python</strong>
       <img src={PythonLogo} alt="Python Logo" className="inline-tech-logo"/>, 
       enabling graphical programs to be translated into optimized machine code. 
       Improved compilation speed by <strong>30%</strong> and reduced runtime errors by <strong>20%</strong>, 
       accelerating internal development workflows.</>,
-      <>Developed an internal chatbot powered by <strong>RAG</strong> that indexed and summarized official documentation, 
-      helping cross-functional teams (e.g., <strong>LabVIEW</strong> developers exploring TestStand) access accurate answers instantly, 
+      <>Developed an internal chatbot powered by <strong className="experience-tech">RAG</strong> that indexed and summarized official documentation, 
+      helping cross-functional teams (e.g., <strong className="experience-tech">LabVIEW</strong> developers exploring TestStand) access accurate answers instantly, 
       improving team productivity and knowledge sharing, reducing knowledge lookup time by <strong>50%</strong>.</>,
-      <>Built automated workflows with <strong>n8n</strong>
-      <img src={n8nLogo} alt="n8n Logo" className="inline-tech-logo"/> and <strong>Docker</strong>
+      <>Built automated workflows with <strong className="experience-tech">n8n</strong>
+      <img src={n8nLogo} alt="n8n Logo" className="inline-tech-logo"/> and <strong className="experience-tech">Docker</strong>
       <img src={DockerLogo} alt="Docker Logo" className="inline-tech-logo"/> to generate and publish circuit documentation, 
       reducing manual preparation time by <strong>70%</strong> and ensuring consistent formatting across all projects.</>,
-      <>Designed and built an internal website using <strong>JavaScript</strong>
-      <img src={JSLogo} alt="JavaScript Logo" className="inline-tech-logo"/> and <strong>ComfyUI</strong>
-      <img src={ComfyLogo} alt="ComfyUI Logo" className="inline-tech-logo"/>  with <strong>React.js</strong>
+      <>Designed and built an internal website using <strong className="experience-tech">JavaScript</strong>
+      <img src={JSLogo} alt="JavaScript Logo" className="inline-tech-logo"/> and <strong className="experience-tech">ComfyUI</strong>
+      <img src={ComfyLogo} alt="ComfyUI Logo" className="inline-tech-logo"/>  with <strong className="experience-tech">React.js</strong>
       <img src={ReactLogo} alt="React Logo" className="inline-tech-logo"/> to auto-generate cartoon avatars from employee photos,
        increasing internal team profile recognizability by <strong>80%</strong>.</>,
     ],
@@ -279,7 +314,7 @@ const experiences: ExperienceItem[] = [
     company: 'VolunTrack.Org',
     companyLinks: [{ name: 'VolunTrack.Org', href: 'https://voluntracks.com/' }],
     location: 'Toronto, Ontario',
-    period: 'Feb 2024 - August 2025',
+    period: 'Feb 2024 - Aug 2025',
     technologies: [
       'React',
       'JavaScript',
@@ -290,11 +325,11 @@ const experiences: ExperienceItem[] = [
       'HTTP',
     ],
     achievements: [
-      <>Designed and executed structured <strong>API test</strong> cases in <strong>Postman</strong>
+      <>Designed and executed structured <strong>API test</strong> cases in <strong className="experience-tech">Postman</strong>
       <img src={PostmanLogo} alt="Postman Logo" className="inline-tech-logo"/> for <strong>happy-path flows</strong>,{' '} 
       <strong>required-field</strong> checks, and <strong>type validation</strong>, verifying correct status codes, 
       response structures, and backend behavior across core endpoints.</>,
-      <>Implemented automated testing using <strong>Python unit tests</strong>, <strong>Jest</strong>
+      <>Implemented automated testing using <strong className="experience-tech">Python unit tests</strong>, <strong className="experience-tech">Jest</strong>
       <img src={JestLogo} alt="JestLogoImage" className="inline-tech-logo"/>, and <strong>visual regression testing</strong>, 
       identifying and resolving <strong>15+</strong> bugs before production release and improving overall system reliability by <strong>50%</strong>.</>,
       <>Extended test coverage to <strong>authentication failures</strong>, <strong>nonexistent-resource</strong> scenarios, 
@@ -321,15 +356,15 @@ const personalProjects: PersonalProject[] = [
     technologies: ['JavaScript', 'jQuery', 'Node.js', 'Express.js', 'HTML', 'CSS', 'SQL'],
     achievements: [
       <>Created an interactive game using JavaScript
-      <img src={JSLogo} alt="JavaScript Logo" className="inline-tech-logo"/>, <strong>HTML</strong>
-      <img src={HTMLLogo} alt="html logo" className="inline-tech-logo"/>, <strong>CSS</strong>
-      <img src={CSSLogo} alt="css logo" className="inline-tech-logo"/>, <strong>jQuery</strong>
-      <img src={jQueryLogo} alt="jQuery Logo" className="inline-tech-logo"/>, <strong>Node.js</strong>
-      <img src={NodeLogo} alt="Node.js Logo" className="inline-tech-logo"/>, and <strong>Express.js</strong>
+      <img src={JSLogo} alt="JavaScript Logo" className="inline-tech-logo"/>, <strong className="experience-tech">HTML</strong>
+      <img src={HTMLLogo} alt="html logo" className="inline-tech-logo"/>, <strong className="experience-tech">CSS</strong>
+      <img src={CSSLogo} alt="css logo" className="inline-tech-logo"/>, <strong className="experience-tech">jQuery</strong>
+      <img src={jQueryLogo} alt="jQuery Logo" className="inline-tech-logo"/>, <strong className="experience-tech">Node.js</strong>
+      <img src={NodeLogo} alt="Node.js Logo" className="inline-tech-logo"/>, and <strong className="experience-tech">Express.js</strong>
       <img src={ExpressLogo} alt = "ExpressLogo" className="inline-tech-logo"/>,{' '}
       enhancing user engagement through immersive audio effects 
       and intuitive interaction features.</>,
-      <>Engineered backend functions in <strong>JavaScript</strong> 
+      <>Engineered backend functions in <strong className="experience-tech">JavaScript</strong> 
       <img src={JSLogo} alt="JS logo" className="inline-tech-logo"/>,{' '}
       to manage player choices and game-state logic, ensuring seamless real-time 
       interactions and reliable outcome validation.</>,
@@ -338,15 +373,15 @@ const personalProjects: PersonalProject[] = [
   {
     title: 'Keeper Note App',
     href: 'https://jimmy20060109.github.io/Website-create/',
-    period: 'Feb 2025 - June 2025',
+    period: 'Feb 2025 - Jun 2025',
     technologies: ['React', 'JavaScript', 'CSS', 'Postman', 'HTTP', 'Unsplash API'],
     achievements: [
-      <>Built a Google Keep-style note-taking app using <strong>React</strong>
+      <>Built a Google Keep-style note-taking app using <strong className="experience-tech">React</strong>
       <img src={ReactLogo} alt="React Logo" className="inline-tech-logo"/>,{' '}
-      functional components and <strong>Hooks (useState)</strong>,{' '}
+      functional components and <strong className="experience-tech">Hooks (useState)</strong>,{' '}
       supporting creating and deleting notes via controlled inputs and prop callbacks.</>,
-      <>Create React App with <strong>npm scripts</strong> + cross-env (OpenSSL fix),{' '}
-      <strong>ESLint</strong> (react-hooks); 
+      <>Create React App with <strong className="experience-tech">npm scripts</strong> + cross-env (OpenSSL fix),{' '}
+      <strong className="experience-tech">ESLint</strong> (react-hooks); 
       CSS + Google Fonts.</>,
       <>Composed reusable components (Header, Footer, CreateArea, Note) 
       with <strong>lifted state</strong> and keyed lists.</>,
@@ -356,34 +391,55 @@ const personalProjects: PersonalProject[] = [
 
 const zhExperiences: Pick<ExperienceItem, 'title' | 'location' | 'period' | 'achievements'>[] = [
   {
+    title: '软件工程师实习生',
+    location: '安大略省渥太华',
+    period: '2026 年 9 月 - 至今',
+    achievements: [
+      <>
+        为复杂的 <strong className="experience-tech">C++</strong> 领域对象开发自定义{' '}
+        <strong className="experience-tech">Natvis</strong> 调试器可视化，展示关键标识信息，
+        在保持发布构建行为不变的同时提升调试效率。
+      </>,
+      <>
+        构建可复用的 <strong className="experience-tech">C++</strong> b-map 容器工具，并实现自动化{' '}
+        <strong className="experience-tech">GoogleTest (gtest)</strong> 和{' '}
+        <strong className="experience-tech">KUnit</strong> 测试，验证功能并提高 Core-Algorithms 组件的回归测试覆盖率。
+      </>,
+      <>
+        通过集成 Performance Test 和 SQM Test，完善 <strong className="experience-tech">Jenkins</strong>{' '}
+        <strong className="experience-tech">CI/CD</strong> 报告，提升构建健康状况的可见性并简化故障诊断。
+      </>,
+    ],
+  },
+  {
     title: '全栈开发实习生',
     location: '安大略省滑铁卢',
     period: '2026 年 1 月 - 2026 年 4 月',
     achievements: [
       <>
         为 <strong>eh-trade</strong> 这一基于动量策略的股票分析 SaaS 平台设计并部署核心基础设施，
-        将 <strong>Python 机器学习</strong>交易模型转化为可用于生产环境的
+        将 <strong className="experience-tech">Python 机器学习</strong>交易模型转化为可用于生产环境的
         <strong>全栈</strong>系统，支持实时股票筛选。
       </>,
       <>
-        通过重构 <strong>Vue 3</strong> 中数据密集的前端模块，优化图表和配对分析界面，
+        通过重构 <strong className="experience-tech">Vue 3</strong> 中数据密集的前端模块，优化图表和配对分析界面，
         减少重复 <strong>API</strong> 与 <strong>RPC</strong> 调用，并实现
         <strong>懒加载</strong>，使桌面端和移动端加载时间降低 <strong>30%</strong>。
       </>,
       <>
-        使用 <strong>Go</strong> 构建可扩展的 <strong>programmatic SEO (pSEO)</strong> 系统，
+        使用 <strong className="experience-tech">Go</strong> 构建可扩展的 <strong>programmatic SEO (pSEO)</strong> 系统，
         为动态股票页面实现 <strong>服务端渲染 (SSR)</strong>、自动 meta/OG 标签生成、
         基于缓存的数据预热和 sitemap 集成，让 <strong>500+</strong> 财报页面及大量对比 URL
         能被高效索引并快速抓取。
       </>,
       <>
-        使用 <strong>TypeScript</strong>、<strong>Go</strong> 和 <strong>Stripe</strong>
+        使用 <strong className="experience-tech">TypeScript</strong>、<strong className="experience-tech">Go</strong> 和 <strong className="experience-tech">Stripe</strong>
         开发安全的认证与订阅基础设施，支持周期性计费、付费功能权限控制，以及从用户引导到订阅管理的完整生命周期。
       </>,
       <>
         使用 <strong>AI 辅助开发</strong>工作流加速全栈功能实现，包括图表优化、watchlist 性能、
-        订阅流程和分析工具，覆盖 <strong>Vue.js</strong>、<strong>TypeScript</strong>、
-        <strong>Go</strong> 与 <strong>Python</strong>，在不牺牲代码审查质量和系统可靠性的前提下，
+        订阅流程和分析工具，覆盖 <strong className="experience-tech">Vue.js</strong>、<strong className="experience-tech">TypeScript</strong>、
+        <strong className="experience-tech">Go</strong> 与 <strong className="experience-tech">Python</strong>，在不牺牲代码审查质量和系统可靠性的前提下，
         将功能交付效率提升 <strong>40%</strong>。
       </>,
     ],
@@ -394,20 +450,20 @@ const zhExperiences: Pick<ExperienceItem, 'title' | 'location' | 'period' | 'ach
     period: '2025 年 5 月 - 2025 年 8 月',
     achievements: [
       <>
-        使用 <strong>C++</strong> 和 <strong>Python</strong> 协助开发 LabVIEW 到原生代码的编译器，
+        使用 <strong className="experience-tech">C++</strong> 和 <strong className="experience-tech">Python</strong> 协助开发 LabVIEW 到原生代码的编译器，
         将图形化程序转换为优化后的机器码，使编译速度提升 <strong>30%</strong>，
         运行时错误减少 <strong>20%</strong>，加速内部开发工作流。
       </>,
       <>
-        开发由 <strong>RAG</strong> 驱动的内部聊天机器人，用于索引和总结官方文档，
+        开发由 <strong className="experience-tech">RAG</strong> 驱动的内部聊天机器人，用于索引和总结官方文档，
         帮助跨职能团队快速获取准确答案，团队知识检索时间减少 <strong>50%</strong>。
       </>,
       <>
-        使用 <strong>n8n</strong> 和 <strong>Docker</strong> 构建自动化工作流，
+        使用 <strong className="experience-tech">n8n</strong> 和 <strong className="experience-tech">Docker</strong> 构建自动化工作流，
         生成并发布电路文档，使人工准备时间减少 <strong>70%</strong>，并保证项目文档格式一致。
       </>,
       <>
-        使用 <strong>JavaScript</strong>、<strong>ComfyUI</strong> 和 <strong>React.js</strong>
+        使用 <strong className="experience-tech">JavaScript</strong>、<strong className="experience-tech">ComfyUI</strong> 和 <strong className="experience-tech">React.js</strong>
         设计并开发内部网站，可根据员工照片自动生成卡通头像，使内部团队资料识别度提升 <strong>80%</strong>。
       </>,
     ],
@@ -418,11 +474,11 @@ const zhExperiences: Pick<ExperienceItem, 'title' | 'location' | 'period' | 'ach
     period: '2024 年 2 月 - 2025 年 8 月',
     achievements: [
       <>
-        使用 <strong>Postman</strong> 设计并执行结构化 <strong>API 测试</strong>用例，
+        使用 <strong className="experience-tech">Postman</strong> 设计并执行结构化 <strong>API 测试</strong>用例，
         覆盖 happy path、必填字段和类型校验，验证核心端点的状态码、响应结构和后端行为。
       </>,
       <>
-        使用 <strong>Python 单元测试</strong>、<strong>Jest</strong> 和
+        使用 <strong className="experience-tech">Python 单元测试</strong>、<strong className="experience-tech">Jest</strong> 和
         <strong>视觉回归测试</strong>实现自动化测试，在生产发布前识别并修复
         <strong>15+</strong> 个缺陷，使整体系统可靠性提升 <strong>50%</strong>。
       </>,
@@ -439,12 +495,12 @@ const zhPersonalProjects: Pick<PersonalProject, 'period' | 'achievements'>[] = [
     period: '2024 年 10 月 - 2024 年 12 月',
     achievements: [
       <>
-        使用 <strong>JavaScript</strong>、<strong>HTML</strong>、<strong>CSS</strong>、
-        <strong>jQuery</strong>、<strong>Node.js</strong> 和 <strong>Express.js</strong>
+        使用 <strong className="experience-tech">JavaScript</strong>、<strong className="experience-tech">HTML</strong>、<strong className="experience-tech">CSS</strong>、
+        <strong className="experience-tech">jQuery</strong>、<strong className="experience-tech">Node.js</strong> 和 <strong className="experience-tech">Express.js</strong>
         创建互动游戏，通过沉浸式音效和直观交互提升用户参与度。
       </>,
       <>
-        使用 <strong>JavaScript</strong> 构建后端函数来管理玩家选择和游戏状态逻辑，
+        使用 <strong className="experience-tech">JavaScript</strong> 构建后端函数来管理玩家选择和游戏状态逻辑，
         确保实时交互流畅且结果校验可靠。
       </>,
     ],
@@ -453,12 +509,12 @@ const zhPersonalProjects: Pick<PersonalProject, 'period' | 'achievements'>[] = [
     period: '2025 年 2 月 - 2025 年 6 月',
     achievements: [
       <>
-        使用 <strong>React</strong> 函数组件和 <strong>Hooks (useState)</strong>
+        使用 <strong className="experience-tech">React</strong> 函数组件和 <strong className="experience-tech">Hooks (useState)</strong>
         构建类似 Google Keep 的笔记应用，支持通过受控输入和 props 回调创建、删除笔记。
       </>,
       <>
-        使用 <strong>npm scripts</strong> + cross-env（OpenSSL 修复）搭建 Create React App，
-        并配置 <strong>ESLint</strong>（react-hooks）、CSS 和 Google Fonts。
+        使用 <strong className="experience-tech">npm scripts</strong> + cross-env（OpenSSL 修复）搭建 Create React App，
+        并配置 <strong className="experience-tech">ESLint</strong>（react-hooks）、CSS 和 Google Fonts。
       </>,
       <>
         组合 Header、Footer、CreateArea、Note 等可复用组件，通过

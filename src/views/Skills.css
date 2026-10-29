@@ -125,33 +125,6 @@
   border-color: rgba(148, 163, 184, 0.28);
 }
 
-/* Soft colored glow in the top-right corner using domain accent */
-.skill-domain-glow {
-  position: absolute;
-  inset: -40% -40% auto auto;
-  width: 70%;
-  aspect-ratio: 1;
-  background: var(--domain-accent);
-  filter: blur(60px);
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-  transition: opacity 0.28s ease, transform 0.28s ease;
-}
-
-.skill-domain:hover .skill-domain-glow {
-  opacity: 0.3;
-  transform: scale(1.05);
-}
-
-:root[data-theme='dark'] .skill-domain-glow {
-  opacity: 0.28;
-}
-
-:root[data-theme='dark'] .skill-domain:hover .skill-domain-glow {
-  opacity: 0.42;
-}
-
 .skill-domain-inner {
   position: relative;
   z-index: 1;

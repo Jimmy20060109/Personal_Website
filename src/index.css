@@ -49,8 +49,8 @@
 :root[data-theme='dark'] {
   --bg-primary: #101216;
   --bg-secondary: #1C2026;
-  --text-primary: #B69CFF;
-  --text-secondary: #5EEAD4;
+  --text-primary: #FFFFFF;
+  --text-secondary: #FFFFFF;
   --color-bg: var(--bg-primary);
   --color-text: var(--text-primary);
   --color-text-light: var(--text-secondary);
@@ -168,6 +168,28 @@ section {
   font-weight: 500;
   background: none;
   padding: 0;
+}
+
+:root[data-theme='dark'] .highlight,
+:root[data-theme='dark'] .about-highlight,
+:root[data-theme='dark'] .resume-link,
+:root[data-theme='dark'] .section-title,
+:root[data-theme='dark'] .skills-category-title,
+:root[data-theme='dark'] .resume-view .tech-tag,
+:root[data-theme='dark'] .resume-view .work-experience strong.experience-tech,
+:root[data-theme='dark'] .resume-view .personal-projects strong.experience-tech,
+:root[data-theme='dark'] .nav-link.active,
+:root[data-theme='dark'] .language-option:not(.active):hover,
+:root[data-theme='dark'] .footer-links a:hover,
+:root[data-theme='dark'] .chatbox-source-item {
+  color: #B69CFF;
+}
+
+:root[data-theme='dark'] .photo-count,
+:root[data-theme='dark'] .not-found-message,
+:root[data-theme='dark'] .resume-view .skills-list .resume-link,
+:root[data-theme='dark'] .language-option.active {
+  color: var(--color-text);
 }
 
 /* global diagonal texture removed — placed in About view only */

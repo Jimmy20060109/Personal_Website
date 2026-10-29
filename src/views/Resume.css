@@ -576,6 +576,28 @@
   border-bottom-color: currentColor;
 }
 
+:root[data-theme='dark'] .experience-company .resume-link {
+  color: var(--color-text);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  padding: 0 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    120deg,
+    rgba(145, 198, 188, 0.25) 0%,
+    rgba(75, 157, 169, 0.25) 100%
+  );
+  transition: var(--transition);
+}
+
+:root[data-theme='dark'] .experience-company .resume-link:hover {
+  background: linear-gradient(
+    120deg,
+    rgba(145, 198, 188, 0.45) 0%,
+    rgba(75, 157, 169, 0.45) 100%
+  );
+}
+
 .experience-location,
 .experience-period {
   font-size: var(--font-size-sm);
