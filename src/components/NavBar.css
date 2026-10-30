@@ -67,8 +67,8 @@
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
-  width: 100%;
+:root[data-theme='dark'] .nav-link.active::after {
+  background-color: rgb(38, 43, 58);
 }
 
 .nav-link.active {

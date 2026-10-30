@@ -29,12 +29,129 @@
   color: #4b5563;
 }
 
+.travel-globe {
+  margin-bottom: var(--spacing-md);
+}
+
+.travel-photo-marker {
+  width: 0;
+  height: 0;
+}
+
+.travel-photo-marker-button {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-rows: 72px 24px;
+  width: 104px;
+  height: 102px;
+  padding: 3px;
+  border: 0;
+  border-radius: 8px;
+  background: #fff;
+  color: #22201e;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.travel-photo-marker-button::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+.travel-photo-marker-button:hover {
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.5);
+}
+
+.travel-photo-marker-button:focus-visible {
+  outline: 3px solid #14836b;
+  outline-offset: 4px;
+}
+
+.travel-photo-marker-button img {
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.travel-photo-marker-count {
+  position: absolute;
+  right: 8px;
+  top: 50px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.travel-photo-marker-label {
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+.travel-map-attribution {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 1;
+  padding: 3px 6px;
+  background: #fff;
+  color: #22201e;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+}
+
+.photography-collection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.photography-collection h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.photography-collection span {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
+.photography-collection button {
+  margin-left: auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
 .photography-gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
   grid-auto-rows: 8px;
   align-items: start;
+  scroll-margin-top: calc(var(--navbar-height, 64px) + 5rem);
 }
 
 .photo-frame {

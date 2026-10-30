@@ -66,7 +66,7 @@
   --color-underline: #94A3B8;
   --color-underline-subtle: #A8B3C7;
   --color-gray: var(--bg-secondary);
-  --color-gray-dark: #262B3A;
+  --color-gray-dark: rgb(38, 43, 58);
   --color-primary: #7A96FF;
   --navbar-bg: color-mix(in srgb, var(--bg-primary) 84%, transparent);
   --navbar-bg-scrolled: color-mix(in srgb, var(--bg-primary) 94%, transparent);
